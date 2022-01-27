@@ -1,13 +1,19 @@
 import React from 'react';
 import People from './People';
-
+import ruck from '../img/ruck.gif'
 export default function Peoples(props) {
    const peoples = props.peoples;
    return (
       <ul className="peoples fs-5 badge ">
-         {peoples[0] ? peoples.map(e => {
-            return <People name={e.name} />
-         }) : <p>Вы можете добавить нового :)</p>}
+         {peoples[0] ? peoples.map((e, i) => {
+            return <People name={e.name} key={`people ${i}`} deletePeople={props.deletePeople} id={`people_${i}`} />
+         }) : 
+         <div>
+            <p>Вы можете добавить нового :)</p>
+         <div className="loading">
+            <img src = {ruck} alt="" />
+         </div>
+         </div>}
       </ul>
    )
 }
