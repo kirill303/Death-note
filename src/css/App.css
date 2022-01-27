@@ -1,0 +1,29 @@
+.note{
+   background-color: black;
+   min-height: 150%;
+   display: flex;
+   flex-direction: column;
+align-items: center;  
+padding: 10px 80px;
+}
+@media (min-width:1200px) {
+.note{
+   max-width: 70%;
+}
+}
+.dn__logo {
+padding: 40px ;
+}
+.plus{
+   color: white;
+   font-size: 60px
+}
+.add-input{
+   background-color: black;
+   border: none;
+   border-bottom: 2px solid white;
+}
+.add-input-button{
+   background-color: black;
+   border: none;
+}
