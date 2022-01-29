@@ -7,13 +7,13 @@ export default function Peoples(props) {
       <ul className="peoples fs-5 badge ">
          {peoples[0] ? peoples.map((e, i) => {
             return <People name={e.name} key={`people ${i}`} deletePeople={props.deletePeople} id={`people_${i}`} />
-         }) : 
-         <div>
-            <p>Вы можете добавить нового :)</p>
-         <div className="loading">
-            <img src = {ruck} alt="" />
-         </div>
-         </div>}
+         }) :
+            <div>
+               <p>У вас пока ничего нет, запишите сюда человека:)</p>
+               <div className="loading">
+                  <img src={ruck} alt="" />
+               </div>
+            </div>}
       </ul>
    )
 }
